@@ -3,14 +3,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.test.vitamiodemos.MainActivity">
+    tools:context="com.test.vitamiodemos.MainActivity$MainActivity">
 
-    <TextView
+    <io.vov.vitamio.widget.CenterLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent" >
+
+        <io.vov.vitamio.widget.VideoView
+            android:id="@+id/buffer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </io.vov.vitamio.widget.CenterLayout>
+
+    <LinearLayout
+
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+
+        android:layout_centerInParent="true"
+
+        android:orientation="horizontal">
+
+        <ProgressBar
+
+            android:id="@+id/probar"
+
+            style="?android:attr/progressBarStyleLarge"
+
+            android:layout_width="50dp"
+
+            android:layout_height="50dp" />
+
+        <TextView
+
+            android:id="@+id/download_rate"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+
+            android:textColor="#FFFFFF"
+
+            android:text="" />
+
+        <TextView
+
+            android:id="@+id/load_rate"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+
+            android:textColor="#FFFFFF"
+
+            android:text="" />
+
+    </LinearLayout>
+
+
 </RelativeLayout>
