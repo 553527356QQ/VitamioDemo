@@ -138,6 +138,11 @@ public class MainActivity extends Activity implements io.vov.vitamio.MediaPlayer
         return true;
     }
 
+    /**
+     *  设置当前的进度
+     * @param mp      the MediaPlayer the update pertains to
+     * @param percent the percentage (0-100) of the buffer that has been filled thus
+     */
     @Override
     public void onBufferingUpdate(io.vov.vitamio.MediaPlayer mp, int percent) {
         loadRateView.setText(percent + "%");
